@@ -5,21 +5,24 @@
     var title = titlecase(page.title);
 
     if (is_archive()){
-      title = __('Page.Archives');   
+      title = __('Page.Archives');
     } else if (is_category()){
       title = __('Page.Categories') + ': ' + page.category;
     } else if (is_tag()){
       title = __('Page.Tags') + ': ' + page.tag;
   }
   %>
-  
+
   <title><% if (title){ %>  <%= title %> | <% } %>  <%= theme.title || config.title %> </title>
 
- 
+  <% if (config.description){ %>
+    <meta name="description" content="<%- config.description %>">
+  <% } %>
+
   <% if (theme.favicon){ %>
     <link rel="icon" href="<%- url_for(  theme.favicon ) %>">
   <% } %>
 
 
-  <%- css('nayo.min') %> 
+  <%- css('nayo.min') %>
 </head>
