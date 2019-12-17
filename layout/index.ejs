@@ -4,26 +4,38 @@
 <% var profile = theme.profile %>
 
 <div class="profile sildeUpMin">
-	
 		<img class="avatar"src="<%- url_for(profile.avatar) %>">
-
 		<p class="author"><%= profile.author || config.author %></p>
-		
 		<div class="social">
-   		<% for (var i in theme.social) { %>      	
-			<a target="_blank" class="social-links" href="<%- (theme.social[i]) %>" >		
+   		<% for (var i in theme.social) { %>
+			<a target="_blank" class="social-links" href="<%- (theme.social[i]) %>" >
 				<i class="iconfont icon-<%= i %>" />
-			</a>	
+			</a>
 	    <% } %>
-    	</div>		
+    	</div>
 </div>
 
-<%# article %>
-<% page.posts.sort('date', -1).each(function (post) { %>    	  	
-  		<% if (post.raw.length > 0 ) {%>
-    			<%- partial('_partial/article',{post:post}) %>     
-     	<% }%>
-<% }) %>
+<section class="archive slideDownMin">
+    <% var  date_format = config.date_format  %>
+    <% var last %>
+    <% page.posts.each(function (post) { %>
+      <% var year = post.date.year() %>
+        <%if(last != year ){%>
+          <%# var posts = postsCount(site.posts , year) %>
+          <div class="archive-part">
+              <span class="archive-part-item">
+                <span><%= year %></span>
+              </span>
+          </div>
+          <% last = year %>
+      <% }%>
+        <div class="archive-item">
+          <time class="archive-time"> <%= date(post.date,  "MMM DD") %> </time>
+          <span class="archive-title"> <a  href="<%- url_for(post.path) %>"><%= post.title || __('Untitled')%></a></span>
+        </div>
+    <% }) %>
+</section>
 
 <%# paginator %>
 <%- partial('_partial/paginator') %>
+

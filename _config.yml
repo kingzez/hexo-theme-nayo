@@ -2,7 +2,7 @@
 # 导航菜单路径
 menu:
   home: /
-  archives: archives
+  # archives: archives
   tags: tags
   about: about
   search: search

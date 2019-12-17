@@ -1,5 +1,5 @@
 //----------
-// index 
+// index
 //----------
 
 
@@ -14,9 +14,9 @@ module.exports = {
 }
 
 /**
- * 
+ *
  * 当前页面 header-menu-link 样式
- * 
+ *
  */
 function initActiveMenu() {
 
@@ -36,7 +36,7 @@ function initActiveMenu() {
 
     let item = $('#header-menu-'.concat(activeMenuItem))
     item.length != 0 ? item.addClass(acitveClass) : $('#header-menu-home').addClass(acitveClass)
-    
+
 }
 
 
@@ -126,7 +126,3 @@ function fixedHeader() {
         .removeClass('slideUp')
         .removeClass('slideDown');
 }
-
-// just say hi....
-console.log('Hexo Theme Nayo, By Lemonreds.');
-console.log('@see [https://github.com/Lemonreds/hexo-theme-nayo]');
