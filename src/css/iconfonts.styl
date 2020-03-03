@@ -21,7 +21,16 @@
     url('./fonts/iconfont-juejin.ttf') format('truetype'),
     url('./fonts/iconfont.svg#iconfont') format('svg')
 
-
+// only yuque icon
+@font-face {
+  font-family: 'iconfont';  /* project id 1669099 */
+  src: url('//at.alicdn.com/t/font_1669099_ezaqkv8z9wp.eot');
+  src: url('//at.alicdn.com/t/font_1669099_ezaqkv8z9wp.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_1669099_ezaqkv8z9wp.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_1669099_ezaqkv8z9wp.woff') format('woff'),
+  url('//at.alicdn.com/t/font_1669099_ezaqkv8z9wp.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_1669099_ezaqkv8z9wp.svg#iconfont') format('svg');
+}
 
 .iconfont
     font-family "iconfont" !important
@@ -157,6 +166,9 @@
 .icon-juejin
     &:before
         content "\e503"
+.icon-yuque
+    &:before
+        content "\e731"
 .icon-share-qq
      &:before
         content "\e61e"
