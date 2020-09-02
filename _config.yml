@@ -18,7 +18,7 @@ title: the kingzez blog
 # 作者信息
 # author为空时 Hexo/_config.yml 配置有效
 profile:
-  author: step by step and never look back. -- kingzez
+  author: step by step and never look back.
   logo: /images/logo1.png
   avatar: /images/header.png
 
@@ -45,8 +45,7 @@ social:
 # site analytics
 # 站点访问统计
 # 填入百度/谷歌的[ analytics id ]
-baidu_analytics:
- #636802045446222199ae541e32c8133e
+baidu_analytics: 177b36730553609e444cea3165c877ed
 google_analytics:
 
 # comment
@@ -62,8 +61,8 @@ disqus:
 # 创建 leancloud 应用 获取 id|key 填入即可
 leancloud:
   comment: false
-  app_id: cFM0eCo0CQ9xmBXmHi1eltol-gzGzoHsz
-  app_key: oh9tizsnvV2vNvWgqEvoNtQO
+  app_id: ''
+  app_key: ''
 
 
 # 支持的分享类型
